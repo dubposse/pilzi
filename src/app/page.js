@@ -1,6 +1,44 @@
+'use client'
+
+import { useMemo, useState } from 'react'
 import { foods } from '../data/foods'
 
+const monthNames = [
+  'Januar',
+  'Februar',
+  'März',
+  'April',
+  'Mai',
+  'Juni',
+  'Juli',
+  'August',
+  'September',
+  'Oktober',
+  'November',
+  'Dezember',
+]
+
 export default function Page() {
+  const currentMonthIndex = new Date().getMonth()
+  const [search, setSearch] = useState('')
+  const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
+
+  const filteredFoods = useMemo(() => {
+    return foods.filter((food) => {
+      const matchesSearch = food.name
+        .toLowerCase()
+        .includes(search.toLowerCase())
+
+      const seasonText = (food.saison || '').toLowerCase()
+      const matchesMonth =
+        selectedMonth === 'Alle Monate' ||
+        seasonText.includes(selectedMonth.toLowerCase()) ||
+        seasonText.includes('ganzjährig')
+
+      return matchesSearch && matchesMonth
+    })
+  }, [search, selectedMonth])
+
   return (
     <main className="page">
       <div className="design-hintergrund">
@@ -14,52 +52,92 @@ export default function Page() {
               alt="Pilzi, dein Guide für saisonale Lebensmittel"
             />
 
-            <p id="slogan">Dein Guide für alles, was jetzt reif ist.</p>
+            <p id="slogan">
+              Finde heraus, welche Lebensmittel gerade Saison haben – und worauf
+              du beim Kauf achten solltest.
+            </p>
+
+            <p className="subtext">
+              Pilzi zeigt dir saisonale Lebensmittel in Deutschland mit Infos zu
+              Haltbarkeit, Nährwerten und Auswahlmerkmalen.
+            </p>
           </div>
         </div>
       </div>
 
       <section className="intro-box">
-        <h2>Alle Artikel</h2>
-        <p>
-          Hier siehst du alle Lebensmittel aus deiner Pilzi-Datenbasis.
-        </p>
+        <h2>Saisonale Lebensmittel</h2>
+        <p>Suche gezielt nach Lebensmitteln und filtere nach Monat.</p>
+      </section>
+
+      <section className="filters-section">
+        <input
+          type="text"
+          placeholder="Lebensmittel suchen..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
+        />
+
+        <select
+          value={selectedMonth}
+          onChange={(e) => setSelectedMonth(e.target.value)}
+          className="month-select"
+        >
+          <option>Alle Monate</option>
+          {monthNames.map((month) => (
+            <option key={month}>{month}</option>
+          ))}
+        </select>
       </section>
 
       <section>
-        <table id="lebensmittelliste">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Kategorie</th>
-              <th>kg-Preis</th>
-              <th>Haltbarkeit</th>
-              <th>Saison</th>
-              <th>Ballaststoffgehalt</th>
-              <th>Menge / Woche</th>
-              <th>Menge / Tag</th>
-              <th>Merkmal</th>
-              <th>Gratis-Vitamine</th>
-            </tr>
-          </thead>
-          <tbody>
-            {foods.map((food) => (
-              <tr key={food.id}>
-                <td>{food.name}</td>
-                <td>{food.kategorie || '—'}</td>
-                <td>{food.kgPreis || '—'}</td>
-                <td>{food.haltbarkeit || '—'}</td>
-                <td>{food.saison || '—'}</td>
-                <td>{food.Ballaststoffgehalt || '—'}</td>
-                <td>{food.verbrauchWoche || '—'}</td>
-                <td>{food.verbrauchTag || '—'}</td>
-                <td>{food.merkmal || '—'}</td>
-                <td>{food.info || '—'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+  <p className="result-count">
+    Monat: <strong>{selectedMonth}</strong> · Treffer: {filteredFoods.length} von {foods.length}
+  </p>
+
+  {filteredFoods.length > 0 ? (
+    <div className="cards-grid">
+      {filteredFoods.map((food) => (
+        <article key={food.id} className="food-card">
+          <div className="card-header">
+            <h3>{food.name}</h3>
+            <span className="card-category">{food.kategorie || '—'}</span>
+          </div>
+
+          <div className="card-details">
+            <p>
+              <strong>kg-Preis:</strong> {food.kgPreis || '—'}
+            </p>
+            <p>
+              <strong>Haltbarkeit:</strong> {food.haltbarkeit || '—'}
+            </p>
+            <p>
+              <strong>Saison:</strong> {food.saison || '—'}
+            </p>
+            <p>
+              <strong>Ballaststoffgehalt:</strong> {food.Ballaststoffgehalt || '—'}
+            </p>
+            <p>
+              <strong>Menge / Woche:</strong> {food.verbrauchWoche || '—'}
+            </p>
+            <p>
+              <strong>Menge / Tag:</strong> {food.verbrauchTag || '—'}
+            </p>
+            <p>
+              <strong>Merkmal:</strong> {food.merkmal || '—'}
+            </p>
+            <p>
+              <strong>Gratis-Vitamine:</strong> {food.info || '—'}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+  ) : (
+    <div className="no-results">Keine Lebensmittel gefunden.</div>
+  )}
+</section>
 
       <footer>
         <details>
