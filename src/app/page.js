@@ -97,23 +97,31 @@ export default function Page() {
   </p>
 
   {filteredFoods.length > 0 ? (
-    <div className="cards-grid">
-      {filteredFoods.map((food) => (
-        <article key={food.id} className="food-card">
-          <div className="card-header">
+  <div className="cards-grid">
+    {filteredFoods.map((food) => (
+      <article key={food.id} className="food-card">
+        <div className="card-header">
+          <div>
             <h3>{food.name}</h3>
             <span className="card-category">{food.kategorie || '—'}</span>
           </div>
+        </div>
+
+        <div className="card-preview">
+          <p>
+            <strong>Saison:</strong> {food.saison || '—'}
+          </p>
+          <p>
+            <strong>Haltbarkeit:</strong> {food.haltbarkeit || '—'}
+          </p>
+        </div>
+
+        <details className="food-details">
+          <summary>Details anzeigen</summary>
 
           <div className="card-details">
             <p>
               <strong>kg-Preis:</strong> {food.kgPreis || '—'}
-            </p>
-            <p>
-              <strong>Haltbarkeit:</strong> {food.haltbarkeit || '—'}
-            </p>
-            <p>
-              <strong>Saison:</strong> {food.saison || '—'}
             </p>
             <p>
               <strong>Ballaststoffgehalt:</strong> {food.Ballaststoffgehalt || '—'}
@@ -131,12 +139,13 @@ export default function Page() {
               <strong>Gratis-Vitamine:</strong> {food.info || '—'}
             </p>
           </div>
-        </article>
-      ))}
-    </div>
-  ) : (
-    <div className="no-results">Keine Lebensmittel gefunden.</div>
-  )}
+        </details>
+      </article>
+    ))}
+  </div>
+) : (
+  <div className="no-results">Keine Lebensmittel gefunden.</div>
+)}
 </section>
 
       <footer>

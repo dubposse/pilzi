@@ -304,3 +304,40 @@ footer {
   color: #b10016;
   font-weight: 600;
 }
+
+.card-preview p {
+  margin: 0.35rem 0;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+.food-details {
+  margin-top: 0.9rem;
+  border-top: 1px solid #f0d7db;
+  padding-top: 0.8rem;
+}
+
+.food-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #b10016;
+  list-style: none;
+}
+
+.food-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.food-details summary::after {
+  content: '＋';
+  float: right;
+  font-size: 1rem;
+}
+
+.food-details[open] summary::after {
+  content: '−';
+}
+
+.food-details summary:hover {
+  opacity: 0.85;
+}
