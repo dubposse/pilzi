@@ -1,66 +1,78 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { foods } from '../data/foods'
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main className="page">
+      <div className="design-hintergrund">
+        <div className="fix-top-menu">
+          <div className="hero-content">
+            <h1>Hallo! Ich bin Pilzi.</h1>
+
+            <img
+              src="/Objekt.png"
+              id="pilzi-image"
+              alt="Pilzi, dein Guide für saisonale Lebensmittel"
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <p id="slogan">Dein Guide für alles, was jetzt reif ist.</p>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </div>
+
+      <section className="intro-box">
+        <h2>Alle Artikel</h2>
+        <p>
+          Hier siehst du alle Lebensmittel aus deiner Pilzi-Datenbasis.
+        </p>
+      </section>
+
+      <section>
+        <table id="lebensmittelliste">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Kategorie</th>
+              <th>kg-Preis</th>
+              <th>Haltbarkeit</th>
+              <th>Saison</th>
+              <th>Ballaststoffgehalt</th>
+              <th>Menge / Woche</th>
+              <th>Menge / Tag</th>
+              <th>Merkmal</th>
+              <th>Gratis-Vitamine</th>
+            </tr>
+          </thead>
+          <tbody>
+            {foods.map((food) => (
+              <tr key={food.id}>
+                <td>{food.name}</td>
+                <td>{food.kategorie || '—'}</td>
+                <td>{food.kgPreis || '—'}</td>
+                <td>{food.haltbarkeit || '—'}</td>
+                <td>{food.saison || '—'}</td>
+                <td>{food.Ballaststoffgehalt || '—'}</td>
+                <td>{food.verbrauchWoche || '—'}</td>
+                <td>{food.verbrauchTag || '—'}</td>
+                <td>{food.merkmal || '—'}</td>
+                <td>{food.info || '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <details>
+          <summary>
+            <strong>Impressum</strong>
+          </summary>
+          <p id="impressum">
+            Matthias Brehm | Nordwestring 89 | 90419 Nürnberg
+            <br />
+            matthiasbrehm1@gmx.de
+          </p>
+        </details>
+      </footer>
+    </main>
+  )
 }
