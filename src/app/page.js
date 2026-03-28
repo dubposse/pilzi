@@ -18,26 +18,34 @@ const monthNames = [
   'Dezember',
 ]
 
+const categories = ['Alle', 'Obst', 'Gemüse', 'Fisch', 'Beilage', 'Alternative', 'Molkereiprodukt', 'Fleisch']
+
 export default function Page() {
   const currentMonthIndex = new Date().getMonth()
   const [search, setSearch] = useState('')
   const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
+  const [selectedCategory, setSelectedCategory] = useState('Alle')
 
   const filteredFoods = useMemo(() => {
-    return foods.filter((food) => {
-      const matchesSearch = food.name
-        .toLowerCase()
-        .includes(search.toLowerCase())
+  return foods.filter((food) => {
+    const matchesSearch = food.name
+      .toLowerCase()
+      .includes(search.toLowerCase())
 
-      const seasonText = (food.saison || '').toLowerCase()
-      const matchesMonth =
-        selectedMonth === 'Alle Monate' ||
-        seasonText.includes(selectedMonth.toLowerCase()) ||
-        seasonText.includes('ganzjährig')
+    const seasonText = (food.saison || '').toLowerCase()
+    const matchesMonth =
+      selectedMonth === 'Alle Monate' ||
+      seasonText.includes(selectedMonth.toLowerCase()) ||
+      seasonText.includes('ganzjährig')
 
-      return matchesSearch && matchesMonth
-    })
-  }, [search, selectedMonth])
+    const categoryText = (food.kategorie || '').toLowerCase()
+    const matchesCategory =
+      selectedCategory === 'Alle' ||
+      categoryText.includes(selectedCategory.toLowerCase())
+
+    return matchesSearch && matchesMonth && matchesCategory
+  })
+}, [search, selectedMonth, selectedCategory])
 
   return (
     <main className="page">
@@ -70,31 +78,49 @@ export default function Page() {
         <p>Suche gezielt nach Lebensmitteln und filtere nach Monat.</p>
       </section>
 
-      <section className="filters-section">
-        <input
-          type="text"
-          placeholder="Lebensmittel suchen..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="search-input"
-        />
+     <section className="filters-section">
+  <input
+    type="text"
+    placeholder="Lebensmittel suchen..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="search-input"
+  />
 
-        <select
-          value={selectedMonth}
-          onChange={(e) => setSelectedMonth(e.target.value)}
-          className="month-select"
-        >
-          <option>Alle Monate</option>
-          {monthNames.map((month) => (
-            <option key={month}>{month}</option>
-          ))}
-        </select>
-      </section>
+  <select
+    value={selectedMonth}
+    onChange={(e) => setSelectedMonth(e.target.value)}
+    className="month-select"
+  >
+    <option>Alle Monate</option>
+    {monthNames.map((month) => (
+      <option key={month}>{month}</option>
+    ))}
+  </select>
+
+  <div className="category-filters">
+    {categories.map((category) => (
+      <button
+        key={category}
+        type="button"
+        className={
+          selectedCategory === category
+            ? 'category-button active'
+            : 'category-button'
+        }
+        onClick={() => setSelectedCategory(category)}
+      >
+        {category}
+      </button>
+    ))}
+  </div>
+</section>
 
       <section>
   <p className="result-count">
-    Monat: <strong>{selectedMonth}</strong> · Treffer: {filteredFoods.length} von {foods.length}
-  </p>
+  Monat: <strong>{selectedMonth}</strong> · Kategorie:{' '}
+  <strong>{selectedCategory}</strong> · Treffer: {filteredFoods.length} von {foods.length}
+</p>
 
   {filteredFoods.length > 0 ? (
   <div className="cards-grid">

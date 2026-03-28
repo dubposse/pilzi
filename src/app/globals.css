@@ -341,3 +341,35 @@ footer {
 .food-details summary:hover {
   opacity: 0.85;
 }
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.category-button {
+  border: none;
+  background: #ffe4e8;
+  color: #b10016;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.category-button:hover {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.category-button.active {
+  background: linear-gradient(135deg, #e4001b, #cc001a);
+  color: #fff;
+}
