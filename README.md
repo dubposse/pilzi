@@ -1,8 +1,8 @@
-# Pilzi 🌱
+# Pilzi 
 
 Pilzi ist eine kleine Web-App, die zeigt, welche Lebensmittel in Deutschland gerade Saison haben – inklusive Informationen zu Haltbarkeit, Nährwerten und Auswahlmerkmalen.
 
-## ✨ Features
+## Features
 
 - Übersicht über saisonale Lebensmittel
 - Anzeige von:
@@ -14,14 +14,14 @@ Pilzi ist eine kleine Web-App, die zeigt, welche Lebensmittel in Deutschland ger
 - SEO-optimierte Ausgabe durch Next.js
 - Keine Datenbank – alle Daten sind statisch im Code
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Next.js
 - React
 - CSS (custom styling)
 - statische Daten (hardcoded)
 
-## 🚀 Getting Started
+## Getting Started
 
 Projekt lokal starten:
 
