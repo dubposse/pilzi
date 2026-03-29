@@ -100,15 +100,17 @@ export default function Page() {
     
     {showMainContent && (
       <>
-        <section className="filters-section">
 
-  <input
-    type="text"
-    placeholder="Lebensmittel suchen..."
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-    className="search-input"
-  />
+        <div className="search-sticky-bar">
+          <input
+            type="text"
+            placeholder="Lebensmittel suchen..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="search-input"
+          />
+        </div>
+        <section className="filters-section">
 
   <div style={{display: 'flex', alignItems: 'center', gap: '0.9rem'}}>
     <select
@@ -189,7 +191,7 @@ export default function Page() {
       </>
     )}
 
-      <footer>
+      <footer className="footer-fixed">
         <details>
           <summary>
             <strong>Impressum</strong>
