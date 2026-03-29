@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef } from 'react'
 import { foods } from '../data/foods'
 
 const monthNames = [
@@ -21,6 +21,16 @@ const monthNames = [
 const categories = ['Alle', 'Obst', 'Gemüse', 'Fisch', 'Beilage', 'Alternative', 'Molkereiprodukt', 'Fleisch']
 
 export default function Page() {
+  const [showMainContent, setShowMainContent] = useState(false)
+  const [fadeImage, setFadeImage] = useState(false)
+  const imageRef = useRef(null)
+    // Scrollt zur Food-Card mit passender ID
+    const scrollToFood = (id) => {
+      const element = document.getElementById(`food-${id}`)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
   const currentMonthIndex = new Date().getMonth()
   const [search, setSearch] = useState('')
   const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
@@ -31,6 +41,7 @@ export default function Page() {
     const matchesSearch = food.name
       .toLowerCase()
       .includes(search.toLowerCase())
+      
 
     const seasonText = (food.saison || '').toLowerCase()
     const matchesMonth =
@@ -46,39 +57,51 @@ export default function Page() {
     return matchesSearch && matchesMonth && matchesCategory
   })
 }, [search, selectedMonth, selectedCategory])
+    const seasonalHighlights = filteredFoods
 
   return (
+
     <main className="page">
-      <div className="design-hintergrund">
-        <div className="fix-top-menu">
-          <div className="hero-content">
-            <h1>Hallo! Ich bin Pilzi.</h1>
-
-            <img
-              src="/Objekt.png"
-              id="pilzi-image"
-              alt="Pilzi, dein Guide für saisonale Lebensmittel"
-            />
-
-            <p id="slogan">
-              Finde heraus, welche Lebensmittel gerade Saison haben – und worauf
-              du beim Kauf achten solltest.
-            </p>
-
-            <p className="subtext">
-              Pilzi zeigt dir saisonale Lebensmittel in Deutschland mit Infos zu
-              Haltbarkeit, Nährwerten und Auswahlmerkmalen.
-            </p>
+      {!showMainContent && (
+        <div className="design-hintergrund">
+          <div className="fix-top-menu">
+            <div className="hero-content">
+              <h1>Finde saisonale Lebensmittel aus deiner Region</h1>
+              <img
+                src="/Objekt.png"
+                id="pilzi-image"
+                alt="Pilzi, dein Saison-Guide für Deutschland"
+                className={`hero-image${fadeImage ? ' fade-out' : ''}`}
+                ref={imageRef}
+              />
+              <section className="intro-box">
+                <h2>Was hat gerade Saison?</h2>
+                <h3 className="hero-desc">
+                  Pilzi zeigt dir, wann Obst und Gemüse in Deutschland reif ist.
+                </h3>
+                {!showMainContent && (
+                  <button
+                    className="hero-cta"
+                    style={{marginTop: '1.2em'}}
+                    onClick={() => {
+                      setFadeImage(true)
+                      setTimeout(() => setShowMainContent(true), 600)
+                    }}
+                  >
+                    Jetzt entdecken
+                  </button>
+                )}
+              </section>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
-      <section className="intro-box">
-        <h2>Saisonale Lebensmittel</h2>
-        <p>Suche gezielt nach Lebensmitteln und filtere nach Monat.</p>
-      </section>
+    
+    {showMainContent && (
+      <>
+        <section className="filters-section">
 
-     <section className="filters-section">
   <input
     type="text"
     placeholder="Lebensmittel suchen..."
@@ -87,16 +110,25 @@ export default function Page() {
     className="search-input"
   />
 
-  <select
-    value={selectedMonth}
-    onChange={(e) => setSelectedMonth(e.target.value)}
-    className="month-select"
-  >
-    <option>Alle Monate</option>
-    {monthNames.map((month) => (
-      <option key={month}>{month}</option>
-    ))}
-  </select>
+  <div style={{display: 'flex', alignItems: 'center', gap: '0.9rem'}}>
+    <select
+      value={selectedMonth}
+      onChange={(e) => setSelectedMonth(e.target.value)}
+      className="month-select month-select--large"
+      style={{minWidth: 180, maxWidth: 260, fontSize: '1.18rem', padding: '1.1rem 1.5rem'}}
+    >
+      <option>Alle Monate</option>
+      {monthNames.map((month) => (
+        <option key={month}>{month}</option>
+      ))}
+    </select>
+    <img
+      src="/Objekt.png"
+      alt="Pilzi Mini"
+      className="pilzi-animated"
+      style={{width: 88, height: 88, marginLeft: 4}}
+    />
+  </div>
 
   <div className="category-filters">
     {categories.map((category) => (
@@ -114,65 +146,48 @@ export default function Page() {
       </button>
     ))}
   </div>
-</section>
-
-      <section>
-  <p className="result-count">
-  Monat: <strong>{selectedMonth}</strong> · Kategorie:{' '}
-  <strong>{selectedCategory}</strong> · Treffer: {filteredFoods.length} von {foods.length}
-</p>
-
-  {filteredFoods.length > 0 ? (
-  <div className="cards-grid">
-    {filteredFoods.map((food) => (
-      <article key={food.id} className="food-card">
-        <div className="card-header">
-          <div>
-            <h3>{food.name}</h3>
-            <span className="card-category">{food.kategorie || '—'}</span>
-          </div>
-        </div>
-
-        <div className="card-preview">
-          <p>
-            <strong>Saison:</strong> {food.saison || '—'}
+        </section>
+        <section className="saison-highlight-section" aria-label="Frische saisonale Lebensmittel im Monat">
+          <h2 className="highlight-headline-small">
+        {/*    <span  className="highlight-month">{selectedMonth}</span> */} Pilzis Regio-Check: Ernte & Mehr
+          </h2>
+          <p className="result-count">
+           <strong>{selectedMonth}</strong> · <strong>{selectedCategory}</strong> · {filteredFoods.length} von {foods.length}
           </p>
-          <p>
-            <strong>Haltbarkeit:</strong> {food.haltbarkeit || '—'}
-          </p>
+
+        {filteredFoods.length > 0 ? (
+        <div className="cards-grid">
+          {filteredFoods.map((food) => (
+            <article key={food.id} id={`food-${food.id}`} className="food-card">
+              <div className="card-header">
+                <h3>{food.name}</h3>
+              </div>
+
+              <div className="card-preview">
+                <p>
+                  <strong>Haltbarkeit:</strong> {food.haltbarkeit || '—'}
+                </p>
+              </div>
+
+              <details className="food-details">
+                <summary>Details anzeigen</summary>
+                <div className="card-details">
+                  {Object.entries(food).filter(([key]) => key !== 'id' && key !== 'name').map(([key, value]) => (
+                    <p key={key}>
+                      <strong>{key}:</strong> {value || '—'}
+                    </p>
+                  ))}
+                </div>
+              </details>
+            </article>
+          ))}
         </div>
-
-        <details className="food-details">
-          <summary>Details anzeigen</summary>
-
-          <div className="card-details">
-            <p>
-              <strong>kg-Preis:</strong> {food.kgPreis || '—'}
-            </p>
-            <p>
-              <strong>Ballaststoffgehalt:</strong> {food.Ballaststoffgehalt || '—'}
-            </p>
-            <p>
-              <strong>Menge / Woche:</strong> {food.verbrauchWoche || '—'}
-            </p>
-            <p>
-              <strong>Menge / Tag:</strong> {food.verbrauchTag || '—'}
-            </p>
-            <p>
-              <strong>Merkmal:</strong> {food.merkmal || '—'}
-            </p>
-            <p>
-              <strong>Gratis-Vitamine:</strong> {food.info || '—'}
-            </p>
-          </div>
-        </details>
-      </article>
-    ))}
-  </div>
-) : (
-  <div className="no-results">Keine Lebensmittel gefunden.</div>
-)}
-</section>
+      ) : (
+        <div className="no-results">Keine Lebensmittel gefunden.</div>
+      )}
+        </section>
+      </>
+    )}
 
       <footer>
         <details>

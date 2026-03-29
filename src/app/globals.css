@@ -1,3 +1,238 @@
+/* Kleine, moderne Info-Headline für saisonale Lebensmittel */
+.highlight-headline-small {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.04rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  color: #b10016;
+  margin: 0.5rem auto 0.5rem auto;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+  border: 1.2px solid #ffd5db;
+  border-radius: 13px;
+  box-shadow: 0 1px 6px rgba(228,0,27,0.06);
+  padding: 0.55rem 1.2rem 0.55rem 1.2rem;
+  max-width: 420px;
+  width: 100%;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.highlight-headline-small .highlight-month {
+  color: #e4001b;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+/* Modernes, schlankes Monats-Auswahlfeld */
+.month-select--large {
+  font-size: 1.08rem !important;
+  padding: 0.55rem 1.1rem !important;
+  min-width: 140px !important;
+  max-width: 200px !important;
+  border-radius: 14px !important;
+  border: 1.5px solid #ffd5db !important;
+  background: #fff !important;
+  color: #b10016 !important;
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 6px rgba(228,0,27,0.04);
+  transition: border 0.18s, box-shadow 0.18s;
+  outline: none;
+}
+.month-select--large:focus {
+  border: 1.5px solid #e4001b !important;
+  box-shadow: 0 0 0 3px rgba(228,0,27,0.10);
+}
+.month-select--large:hover {
+  border: 1.5px solid #e4001b !important;
+}
+/* Einheitlicher Card-/Button-Stil für Überschrift und Kategorie-Filter */
+.highlight-headline {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.18rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  color: #b10016;
+  margin: 0.5rem auto 0.5rem auto;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+  background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+  border: 1.5px solid #ffd5db;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(228,0,27,0.07);
+  padding: 0.9rem 1.7rem 0.9rem 1.7rem;
+  max-width: 520px;
+  width: 100%;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.highlight-headline:hover {
+  box-shadow: 0 6px 24px rgba(228,0,27,0.13);
+  border-color: #e4001b;
+}
+
+.category-button {
+  border: 1.5px solid #ffd5db;
+  background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+  color: #b10016;
+  padding: 0.45rem 1.1rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(228,0,27,0.06);
+  margin: 0.13rem 0.18rem;
+  transition: box-shadow 0.18s, border 0.18s, background 0.18s, color 0.18s;
+}
+.category-button:hover, .category-button:focus {
+  box-shadow: 0 4px 16px rgba(228,0,27,0.13);
+  border-color: #e4001b;
+  outline: none;
+}
+.category-button.active {
+  background: linear-gradient(135deg, #e4001b 0%, #cc001a 100%);
+  color: #fff;
+  border: 1.5px solid #e4001b;
+  box-shadow: 0 4px 16px rgba(228,0,27,0.13);
+}
+/* Card-/Badge-Stil für saisonale Überschrift */
+.highlight-headline {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  color: #b10016;
+  margin: 0.5rem auto 0.5rem auto;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+  background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+  border: 1.5px solid #ffd5db;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(228,0,27,0.07);
+  padding: 1.1rem 2.2rem 1.1rem 2.2rem;
+  max-width: 520px;
+  width: 100%;
+  transition: box-shadow 0.18s;
+}
+.highlight-headline:hover {
+  box-shadow: 0 6px 24px rgba(228,0,27,0.13);
+}
+/* Stil für die saisonale Überschrift */
+.highlight-headline {
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 700;
+  color: #b10016;
+  margin: 1.2rem 0 1.1rem 0;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  background: linear-gradient(90deg, #e4001b 60%, #cc001a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 12px rgba(228, 0, 27, 0.08);
+}
+/* Großes, animiertes Pilzi-Bild im Filter */
+.pilzi-animated {
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-left: 4px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 8px rgba(228,0,27,0.13));
+  border-radius: 10px;
+  background: rgba(255,255,255,0.55);
+  animation: wobble 3.2s ease-in-out infinite;
+}
+
+.month-select--large {
+  font-size: 1.18rem !important;
+  padding: 1.1rem 1.5rem !important;
+  min-width: 180px !important;
+  max-width: 260px !important;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(-15deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-8px);
+  }
+}
+/* Mini-Pilzi neben Monats-Select */
+.pilzi-mini {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-left: 2px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 2px rgba(228,0,27,0.10));
+  border-radius: 6px;
+  background: #fff;
+}
+
+.month-select--small {
+  font-size: 0.98rem;
+  padding: 0.5rem 0.7rem;
+  min-width: 90px !important;
+  max-width: 220px !important;
+}
+/* --- CTA Button "Jetzt entdecken" --- */
+.hero-cta {
+  display: inline-block;
+  background: linear-gradient(90deg, #e4001b 60%, #cc001a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 0.85em 2.2em;
+  box-shadow: 0 2px 16px rgba(228,0,27,0.10);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  margin-top: 1.2em;
+}
+.hero-cta:hover, .hero-cta:focus {
+  background: linear-gradient(90deg, #cc001a 60%, #e4001b 100%);
+  box-shadow: 0 6px 24px rgba(228,0,27,0.16);
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+/* Kategorie-Filterkarten wie Lebensmittelkarten, aber halb so groß (nur große Monitore) */
+@media (min-width: 701px) {
+  .category-button {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    color: #b10016;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    font-size: 0.57rem;
+    padding: 0.19rem 0.35rem;
+    min-width: 0;
+    min-height: 0;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0.1rem 0.15rem;
+  }
+  .category-button.active {
+    background: linear-gradient(135deg, #e4001b, #cc001a);
+    color: #fff;
+    border: 1px solid #e4001b;
+  }
+  .category-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 0, 27, 0.10);
+    opacity: 0.95;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -198,11 +433,24 @@ footer {
 .search-input {
   width: 100%;
   max-width: 420px;
-  padding: 0.9rem 1rem;
-  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.13rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  color: #b10016;
+  letter-spacing: 0.02em;
   border: 2px solid #e4001b;
   border-radius: 8px;
   outline: none;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.search-input::placeholder {
+  color: #b10016cc;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  opacity: 1;
 }
 
 .search-input:focus {
@@ -223,40 +471,50 @@ footer {
 
 .filters-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin: 2.5rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .month-select {
   min-width: 180px;
-  padding: 0.9rem 1rem;
-  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.13rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  color: #b10016;
+  letter-spacing: 0.02em;
   border: 2px solid #e4001b;
   border-radius: 8px;
   background: #fff;
   outline: none;
+  transition: box-shadow 0.18s, border 0.18s;
 }
 
 .month-select:focus {
-  box-shadow: 0 0 0 3px rgba(228, 0, 27, 0.12);
+  box-shadow: 0 0 0 4px rgba(228, 0, 27, 0.16);
+  border-color: #cc001a;
 }
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .food-card {
   background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
   border: 1px solid #e0e0e0;
-  border-radius: 14px;
-  padding: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem 0.5rem 0.6rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -269,30 +527,30 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.8rem;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .card-header h3 {
   margin: 0;
   color: #e4001b;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .card-category {
   background: #ffe4e8;
   color: #b10016;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.35rem 0.6rem;
+  padding: 0.18rem 0.5rem;
   border-radius: 999px;
   white-space: nowrap;
 }
 
 .card-details p {
-  margin: 0.45rem 0;
+  margin: 0.18rem 0;
   line-height: 1.45;
-  font-size: 0.95rem;
+  font-size: 0.91rem;
 }
 
 .no-results {
@@ -312,9 +570,9 @@ footer {
 }
 
 .food-details {
-  margin-top: 0.9rem;
+  margin-top: 0.5rem;
   border-top: 1px solid #f0d7db;
-  padding-top: 0.8rem;
+  padding-top: 0.4rem;
 }
 
 .food-details summary {
@@ -345,7 +603,7 @@ footer {
 .category-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.3rem;
   justify-content: center;
   width: 100%;
   margin-top: 0.5rem;
@@ -355,9 +613,9 @@ footer {
   border: none;
   background: #ffe4e8;
   color: #b10016;
-  padding: 0.65rem 0.9rem;
+  padding: 0.38rem 0.7rem;
   border-radius: 999px;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: none;
@@ -373,3 +631,185 @@ footer {
   background: linear-gradient(135deg, #e4001b, #cc001a);
   color: #fff;
 }
+
+.season-highlight-section {
+  margin: 2rem 0 2.5rem;
+  text-align: center;
+}
+
+.season-highlight-section h2 {
+  margin-bottom: 0.4rem;
+}
+
+.season-highlight-section p {
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+.season-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.season-highlight-card {
+  background: linear-gradient(135deg, #fff5f6 0%, #ffffff 100%);
+  border: 1px solid #ffd5db;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(228, 0, 27, 0.08);
+}
+
+.season-highlight-card h3 {
+  margin: 0 0 0.5rem;
+  color: #e4001b;
+  font-size: 1.05rem;
+}
+
+.season-highlight-card p {
+  margin: 0.45rem 0 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.season-list-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.season-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.season-item {
+  border: none;
+  background: #fff5f6;
+  color: #b10016;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.season-item:hover {
+  background: #ffe4e8;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #fff5f6;
+  color: #b10016;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#slogan {
+  max-width: 760px;
+  margin: 1rem auto 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.subtext {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  font-size: 0.96rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* --- Kompaktes Card- und Grid-Layout --- */
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.food-card {
+  padding: 0.5rem 0.6rem 0.5rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.93rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.card-header {
+  margin-bottom: 0.3rem;
+  gap: 0.4rem;
+}
+.card-header h3 {
+  font-size: 1rem;
+}
+.card-category {
+  font-size: 0.75rem;
+  padding: 0.18rem 0.5rem;
+}
+.card-preview p, .card-details p {
+  font-size: 0.91rem;
+  margin: 0.18rem 0;
+}
+.food-details {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+}
+.category-filters {
+  gap: 0.3rem;
+}
+.category-button {
+  padding: 0.38rem 0.7rem;
+  font-size: 0.85rem;
+}
+.filters-section {
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.search-input, .month-select {
+  flex: 1 1 0;
+  min-width: 160px;
+  max-width: 600px;
+  width: 100%;
+  padding: 1.1rem 1.6rem;
+  font-size: 1.18rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+.saison-highlight-section h2 {
+  font-size: 0.98rem;
+  letter-spacing: -0.5px;
+  color: #b10016;
+  margin-bottom: 0.2rem;
+}
+@media (max-width: 700px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+  }
+  .food-card {
+    padding: 0.4rem 0.3rem 0.4rem 0.3rem;
+  }
+  .filters-section {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+  .search-input, .month-select {
+    max-width: 100%;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
