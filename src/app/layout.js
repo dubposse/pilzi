@@ -5,8 +5,12 @@ export const metadata = {
   description:
     'Finde heraus, welche Lebensmittel in Deutschland Saison haben. Pilzi zeigt dir frische Optionen nach Monat und Kategorie – einfach und übersichtlich.',
   keywords: ['Lebensmittel', 'Frische', 'Saisonalität', 'Obst', 'Gemüse', 'Fisch'],
-
-  
+  icons: {
+    icon: '/favicon.png',
+  },
+  alternates: {
+    canonical: 'https://pilzi.vercel.app/',
+  },
   openGraph: {
     title: 'Pilzi',
     description:
@@ -24,30 +28,30 @@ export const metadata = {
       },
     ],
   },
-
 }
 
 export default function RootLayout({ children }) {
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Pilzi',
+    url: 'https://pilzi.vercel.app/',
+    description:
+      'Finde heraus, welche Lebensmittel in Deutschland Saison haben. Pilzi zeigt dir frische Optionen nach Monat und Kategorie – einfach und übersichtlich.',
+    inLanguage: 'de',
+  }
+
   return (
     <html lang="de">
-      <head>
-        <link rel="canonical" href="https://pilzi.vercel.app/" />
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'Pilzi',
-              url: 'https://pilzi.vercel.app/',
-              description:
-                'Finde heraus, welche Lebensmittel in Deutschland Saison haben. Pilzi zeigt dir frische Optionen nach Monat und Kategorie – einfach und übersichtlich.',
-              inLanguage: 'de',
-            }),
+            __html: JSON.stringify(websiteSchema),
           }}
         />
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   )
 }
