@@ -7,6 +7,7 @@ export const metadata = {
   keywords: ['Lebensmittel', 'Frische', 'Saisonalität', 'Obst', 'Gemüse', 'Fisch'],
   icons: {
     icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
   },
   alternates: {
     canonical: 'https://pilzi.vercel.app/',
