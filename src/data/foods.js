@@ -37,15 +37,15 @@ export const foods = [
         },
         {
             id: 5,
-            name: "Spinat",
-            kgPreis: "4.0 Euro pro 1kg",
-            haltbarkeit: "3 Tage",
-            kategorie: "Gemüse",
-            saison: "April, Mai, Juni, Juli, August, September, Oktober",
-            Ballaststoffgehalt: "2.2g pro 100g",
-            verbrauchWoche: "300g",
-            verbrauchTag: "43g",
-            merkmal: "Blätter sollten kräftig grün und frei von welken Stellen sein"
+            name: "Mandel",
+            kgPreis: "12.0 Euro pro 1kg",
+            haltbarkeit: "1 Jahr",
+            kategorie: "Alternative",
+            saison: "September, Oktober",
+            Ballaststoffgehalt: "12g pro 100g",
+            verbrauchWoche: "100g",
+            verbrauchTag: "14g",
+            merkmal: "FÜr echte Pfälzer Mandeln solltest du im Herbst einen Ausflug an die Deutsche Weinstraße planen."
         },
         {
             id: 6,
@@ -73,15 +73,15 @@ export const foods = [
         },
         {
             id: 8,
-            name: "Mandeln",
+            name: "Grüne Mandeln (unreif)",
             kgPreis: "12.0 Euro pro 1kg",
-            haltbarkeit: "1 Jahr",
+            haltbarkeit: "3 bis 5 Tage",
             kategorie: "Alternative",
-            saison: "",
+            saison: "April, Mai",
             Ballaststoffgehalt: "12g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
-            merkmal: "Knackige, braune Schale und angenehmer Duft"
+            merkmal: "Grün, leicht pelzig(ähnlich kleiner Aprikose), Kern weiß. In orientalischen Läden erhältlich (Çağla, Chaghale Badam). Als Snack mitsamt Schale in Salz dippen.  "
         }, 
         {
             id: 9,
@@ -149,7 +149,7 @@ export const foods = [
             kgPreis: "2.2 Euro pro 1kg",
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
-            saison: "Ganzjährig",
+            saison: "",
             Ballaststoffgehalt: "7.6g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
@@ -588,7 +588,7 @@ export const foods = [
             Ballaststoffgehalt: "2.2g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
-            merkmal: "Kräftig grüne Blätter, keine welken Stellen"
+            merkmal: "Kräftig grüne Blätter, keine welken Stellen. Achte auf ein Label - Frische Ernte!"
         },
         {
             id: 51,
