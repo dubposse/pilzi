@@ -23,8 +23,8 @@ export const metadata = {
     images: [
       {
         url: 'https://pilzi.vercel.app/og-image.jpg',
-        width: 1194,
-        height: 1190,
+        width: 1200,
+        height: 630,
         alt: 'Pilzi – Saisonale Lebensmittel entdecken',
       },
     ],
