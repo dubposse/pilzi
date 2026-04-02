@@ -6,7 +6,7 @@ export const metadata = {
     'Finde heraus, welche Lebensmittel in Deutschland Saison haben. Pilzi zeigt dir frische Optionen nach Monat und Kategorie – einfach und übersichtlich.',
   keywords: ['Lebensmittel', 'Frische', 'Saisonalität', 'Obst', 'Gemüse', 'Fisch'],
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   alternates: {
