@@ -691,6 +691,7 @@ footer.footer-elegant {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.5rem;
   margin-top: 0.5rem;
+  align-items: start;
 }
 
 .food-card {
