@@ -21,17 +21,29 @@ const monthNames = [
 
 const categories = ['Alle', 'Obst', 'Gemüse', 'Fisch', 'Beilage', 'Alternative', 'Molkereiprodukt', 'Fleisch']
 
+// Professionelle Label-Zuordnung für die Anzeige
+const fieldLabels = {
+  kgPreis: 'Preis',
+  haltbarkeit: 'Haltbarkeit',
+  kategorie: 'Kategorie',
+  saison: 'Saison',
+  ballaststoffgehalt: 'Ballaststoffgehalt',
+  verbrauchWoche: 'Verbrauch/Woche',
+  verbrauchTag: 'Verbrauch/Tag',
+  merkmal: 'Merkmal',
+  info: 'Info'
+}
+
 export default function Page() {
-  const [showMainContent, setShowMainContent] = useState(false)
-  const [fadeImage, setFadeImage] = useState(false)
-  const imageRef = useRef(null)
-    // Scrollt zur Food-Card mit passender ID
-    const scrollToFood = (id) => {
-      const element = document.getElementById(`food-${id}`)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
+  const appRef = useRef(null)
+  
+  // Scrollt zur Food-Card mit passender ID
+  const scrollToFood = (id) => {
+    const element = document.getElementById(`food-${id}`)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
+  }
   const currentMonthIndex = new Date().getMonth()
   const [search, setSearch] = useState('')
   const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
@@ -63,44 +75,44 @@ export default function Page() {
   return (
 
     <main className="page">
-      {!showMainContent && (
-        <div className="design-hintergrund">
-          <div className="fix-top-menu">
-            <div className="hero-content">
-              <h1>Finde saisonale Lebensmittel aus deiner Region</h1>
-              <img
-                src="/Objekt.png"
-                id="pilzi-image"
-                alt="Pilzi, dein Saison-Guide für Deutschland"
-                className={`hero-image${fadeImage ? ' fade-out' : ''}`}
-                ref={imageRef}
-              />
-              <section className="intro-box">
-                <h2>Was hat gerade Saison?</h2>
-                <h3 className="hero-desc">
-                  Pilzi zeigt dir, wann Obst und Gemüse in Deutschland reif ist.
-                </h3>
-                {!showMainContent && (
-                  <button
-                    className="hero-cta"
-                    style={{marginTop: '1.2em'}}
-                    onClick={() => {
-                      setFadeImage(true)
-                      setTimeout(() => setShowMainContent(true), 600)
-                    }}
-                  >
-                    Jetzt entdecken
-                  </button>
-                )}
-              </section>
-            </div>
+      <div className="design-hintergrund" style={{ minHeight: '100vh' }}>
+        <div className="fix-top-menu">
+          <div className="hero-content">
+            <h1>Finde saisonale Lebensmittel aus deiner Region</h1>
+            <img
+              src="/Objekt.png"
+              id="pilzi-image"
+              alt="Pilzi, dein Saison-Guide für Deutschland"
+              className="hero-image"
+              loading="eager"
+              fetchPriority="high"
+            />
+            <section className="intro-box">
+              <h2>Was hat gerade Saison?</h2>
+              <h3 className="hero-desc">
+                Pilzi zeigt dir, wann Obst und Gemüse in Deutschland reif ist.
+              </h3>
+              <a
+                href="#app"
+                className="hero-cta"
+                style={{
+                  marginTop: '1.2em',
+                  display: 'inline-block',
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  position: 'relative',
+                  zIndex: 999,
+                  pointerEvents: 'auto'
+                }}
+              >
+                Jetzt entdecken
+              </a>
+            </section>
           </div>
         </div>
-      )}
+      </div>
 
-    
-    {showMainContent && (
-      <>
+      <div id="app" ref={appRef}>
 
         <div className="search-sticky-bar">
           <input
@@ -130,6 +142,7 @@ export default function Page() {
       alt="Pilzi Mini"
       className="pilzi-animated"
       style={{width: 88, height: 88, marginLeft: 4}}
+      loading="lazy"
     />
   </div>
 
@@ -175,9 +188,9 @@ export default function Page() {
               <details className="food-details">
                 <summary>Details anzeigen</summary>
                 <div className="card-details">
-                  {Object.entries(food).filter(([key]) => key !== 'id' && key !== 'name').map(([key, value]) => (
+                  {Object.entries(food).filter(([key]) => key !== 'id' && key !== 'name' && key !== 'verbrauchWoche' && key !== 'verbrauchTag').map(([key, value]) => (
                     <p key={key}>
-                      <strong>{key}:</strong> {value || '—'}
+                      <strong>{fieldLabels[key] || key}:</strong> {value || '—'}
                     </p>
                   ))}
                 </div>
@@ -189,8 +202,7 @@ export default function Page() {
         <div className="no-results">Keine Lebensmittel gefunden.</div>
       )}
         </section>
-      </>
-    )}
+      </div>
 
       <Footer />
     </main>

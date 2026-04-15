@@ -6,7 +6,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Obst",
             saison: "September, Oktober, November",
-            Ballaststoffgehalt: "2.4g pro 100g",
+            ballaststoffgehalt: "2.4g pro 100g",
             verbrauchWoche: "3 Stück",
             verbrauchTag: "0.43 Stück",
             merkmal: "Feste Schale, angenehmer Duft, keine Druckstellen"
@@ -18,7 +18,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September, ",
-            Ballaststoffgehalt: "2.6g pro 100g",
+            ballaststoffgehalt: "2.6g pro 100g",
             verbrauchWoche: "1 Kopf",
             verbrauchTag: "0.14 Kopf",
             merkmal: "Feste, dunkelgrüne Röschen und knackiger Stiel"
@@ -30,7 +30,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Gemüse",
             saison: "Juli, August, September, Oktober, November",
-            Ballaststoffgehalt: "2.8g pro 100g",
+            ballaststoffgehalt: "2.8g pro 100g",
             verbrauchWoche: "5 Stück",
             verbrauchTag: "0.71 Stück",
             merkmal: "Feste, glatte Oberfläche und kräftige Farbe"
@@ -42,7 +42,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative",
             saison: "September, Oktober",
-            Ballaststoffgehalt: "12g pro 100g",
+            ballaststoffgehalt: "12g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "FÜr echte Pfälzer Mandeln solltest du im Herbst einen Ausflug an die Deutsche Weinstraße planen."
@@ -54,7 +54,7 @@ export const foods = [
             haltbarkeit: "4 Tage",
             kategorie: "Fleisch",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Fleisch sollte eine blassrosa Farbe haben und frei von unangenehmen Gerüchen sein"
@@ -66,7 +66,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "8g pro 100g",
+            ballaststoffgehalt: "8g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Weiche, glänzende Haut ohne Kristallisation von Zucker"
@@ -78,7 +78,7 @@ export const foods = [
             haltbarkeit: "3 bis 5 Tage",
             kategorie: "Alternative",
             saison: "April, Mai",
-            Ballaststoffgehalt: "12g pro 100g",
+            ballaststoffgehalt: "12g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Grün, leicht pelzig(ähnlich kleiner Aprikose), Kern weiß. In orientalischen Läden erhältlich (Çağla, Chaghale Badam). Als Snack mitsamt Schale in Salz dippen.  "
@@ -90,7 +90,7 @@ export const foods = [
             haltbarkeit: "7 Tage nach Öffnung",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "0.8g pro 100ml",
+            ballaststoffgehalt: "0.8g pro 100ml",
             verbrauchWoche: "1L",
             verbrauchTag: "143ml",
             merkmal: "Gleichmäßige Konsistenz, kein Absetzen von Bestandteilen, frischer Geruch"
@@ -102,7 +102,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Obst",
             saison: "Juli, August, September",
-            Ballaststoffgehalt: "0.9g pro 100g",
+            ballaststoffgehalt: "0.9g pro 100g",
             verbrauchWoche: "1 Stück",
             verbrauchTag: "0.14 Stück",
             merkmal: "Feste Schale, schweres Gewicht, süßer Duft am Stielansatz",
@@ -114,7 +114,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Fleisch",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Fleisch sollte eine blassrosa Farbe haben und frei von unangenehmen Gerüchen sein"
@@ -126,7 +126,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Fleisch",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "400g",
             verbrauchTag: "57g",
             merkmal: "Fleisch sollte eine blassrosa Farbe haben und frei von unangenehmen Gerüchen sein"
@@ -138,7 +138,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Obst",
             saison: "August, September, Oktober, November",
-            Ballaststoffgehalt: "3.1g pro 100g",
+            ballaststoffgehalt: "3.1g pro 100g",
             verbrauchWoche: "3 Stück",
             verbrauchTag: "0.43 Stück",
             merkmal: "Feste, glatte Schale, angenehmer Duft, leicht nachgebend am Stielansatz"
@@ -150,7 +150,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "7.6g pro 100g",
+            ballaststoffgehalt: "7.6g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Glasbehälter besser als Dosen, einheitliche Größe und gleichmäßige helle Farbe"
@@ -162,7 +162,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "7g pro 100g",
+            ballaststoffgehalt: "7g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Bio-Qualität, sauber, trocken, einheitliche Farbe (weiß, rot oder schwarz) und nussiger Geruch"
@@ -174,7 +174,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "8g pro 100g",
+            ballaststoffgehalt: "8g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Bio-Qualität, sauber, trocken, einheitliche Farbe (rot, gelb) und erdiger Geruch"
@@ -186,7 +186,7 @@ export const foods = [
             haltbarkeit: "1 Monat",
             kategorie: "Beilage",
             saison: "Juni, Juli, August, September, Oktober",
-            Ballaststoffgehalt: "2.2g pro 100g",
+            ballaststoffgehalt: "2.2g pro 100g",
             verbrauchWoche: "2kg",
             verbrauchTag: "286g",
             merkmal: "Feste, glatte Schale ohne grüne Stellen oder Keime"
@@ -198,7 +198,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Beilage",
             saison: "",
-            Ballaststoffgehalt: "2.2g pro 100g",
+            ballaststoffgehalt: "2.2g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Fein gemahlen, gleichmäßige Farbe, frei von Klumpen"
@@ -210,7 +210,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Beilage",
             saison: "",
-            Ballaststoffgehalt: "1.8g pro 100g",
+            ballaststoffgehalt: "1.8g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Fein gemahlen, gleichmäßige gelbe Farbe, frei von Klumpen"
@@ -222,7 +222,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Langes Haltbarkeitsdatum, fester Quark ohne Flüssigkeitsansammlung"
@@ -234,7 +234,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Langes Haltbarkeitsdatum, cremiger Quark ohne Flüssigkeitsansammlung"
@@ -246,7 +246,7 @@ export const foods = [
             haltbarkeit: "7 Tage",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100ml",
+            ballaststoffgehalt: "0g pro 100ml",
             verbrauchWoche: "1L",
             verbrauchTag: "143ml",
             merkmal: "Nur zwei Zutaten: Milch und Kefirkulturen, meiden Sie Zusatzstoffe, Zucker und Kefir-mild"
@@ -259,7 +259,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Fester Laib, keine Verfärbungen oder Schimmelstellen"
@@ -271,7 +271,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "März, April, Mai",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Eine gute Fischtheke riecht nach Meer und nicht fischig."
@@ -283,7 +283,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "September, Oktober, November, Dezember, Januar, Februar, März",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Das Eis auf dem der Fisch liegt, sollte sauber und weiß aussehen."
@@ -295,7 +295,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "Mai, Juni, Juli, August, September",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Der Fisch sollte auf viel zerstoßenem Eis liegen, aber nicht darin schwimmen."
@@ -307,7 +307,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "September, Oktober, November, Dezember, Januar, Februar",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Frischer, roher Fisch braucht seinen eigenen, sauberen Bereich. Nicht neben Marinaden!"
@@ -319,7 +319,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "Juni, Juli, August, September",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
              merkmal: "Wenn alles unter Sahnesauce ertrinkt, ist der Fisch meist nicht mehr frisch."
@@ -331,7 +331,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Fisch",
             saison: "Mai, Juni, Juli, August",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Ein Restaurant, das nur 3-4 Fischgerichte anbietet, hat meist frischen Fisch im Angebot."
@@ -343,7 +343,7 @@ export const foods = [
             haltbarkeit: "3 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "Juni, Juli, August, September, Oktober, November",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Kaufen Sie an der Frische-Theke und achten Sie auf Heumilch-Siegel"
@@ -355,7 +355,7 @@ export const foods = [
             haltbarkeit: "3 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "Juni, Juli, August, September, Oktober, November",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Kaufen Sie an der Frische-Theke und achten Sie auf Heumilch-Siegel"
@@ -367,7 +367,7 @@ export const foods = [
             haltbarkeit: "3 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "Mai, Juni, Juli, August, September",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Mai-Gouda ist oft als Aktionsware an der Frische-Theke erhältlich."
@@ -379,7 +379,7 @@ export const foods = [
             haltbarkeit: "3 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "Mai, Juni, Juli, August, September",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Mai-Gouda ist oft als Aktionsware an der Frische-Theke erhältlich."
@@ -391,7 +391,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "März, April, Mai, September, Oktober, November",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Personal an der Käsetheke weiß, welche Käsereien gerade die beste Qualität liefern"
@@ -403,7 +403,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "März, April, Mai, September, Oktober, November",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "An der bedienten Käse-Theke kann das Personal oft sagen, welche Käsereien gerade die beste Qualität liefern"
@@ -415,7 +415,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "März, April, Mai, Juni, Juli, August, September, Oktober",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Fragen Sie an der Käsetheke nach lokalem Ziegenkäse - Supermärkte führen oft regionale Hofprodukte."
@@ -427,7 +427,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Fisch",
             saison: "Mai, Juni, Juli",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Matjes sind junge, mild gesalzene Heringe, die besonders im Mai bis Juli frisch erhältlich sind."
@@ -439,7 +439,7 @@ export const foods = [
             haltbarkeit: "4 - 8 Tage",
             kategorie: "Gemüse",
             saison: "November, Dezember, Januar",
-            Ballaststoffgehalt: "3.8g pro 100g",
+            ballaststoffgehalt: "3.8g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Feste Köpfe, leuchtend grüne Blätter, keine gelben Blätter",
@@ -452,7 +452,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Obst",
             saison: "Oktober, November",
-            Ballaststoffgehalt: "4g pro 100g",
+            ballaststoffgehalt: "4g pro 100g",
             verbrauchWoche: "2 Stück",
             verbrauchTag: "0.29 Stück",
             merkmal: "Feste, schwere Frucht, glatte Schale",
@@ -465,7 +465,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Obst",
             saison: "August, September, Oktober",
-            Ballaststoffgehalt: "2.9g pro 100g",
+            ballaststoffgehalt: "2.9g pro 100g",
             verbrauchWoche: "5 Stück",
             verbrauchTag: "0.71 Stück",
             merkmal: "Weiche, aber nicht matschige Haut, aromatischer Duft"
@@ -477,7 +477,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Obst",
             saison: "September, Oktober",
-            Ballaststoffgehalt: "0.9g pro 100g",
+            ballaststoffgehalt: "0.9g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Feste, pralle Beeren, keine runzligen oder matschigen Stellen"
@@ -489,7 +489,7 @@ export const foods = [
             haltbarkeit: "4 Tage",
             kategorie: "Obst",
             saison: "Juli, August, September",
-            Ballaststoffgehalt: "1.5g pro 100g",
+            ballaststoffgehalt: "1.5g pro 100g",
             verbrauchWoche: "5 Stück",
             verbrauchTag: "0.71 Stück",
             merkmal: "Duftend, samtige Haut, gibt leicht nach"
@@ -501,7 +501,7 @@ export const foods = [
             haltbarkeit: "4 Tage",
             kategorie: "Obst",
             saison: "Juli, August, September",
-            Ballaststoffgehalt: "1.7g pro 100g",
+            ballaststoffgehalt: "1.7g pro 100g",
             verbrauchWoche: "5 Stück",
             verbrauchTag: "0.71 Stück",
             merkmal: "Glänzende, glatte Haut, gibt leicht nach"
@@ -513,7 +513,7 @@ export const foods = [
             haltbarkeit: "4 Tage",
             kategorie: "Obst",
             saison: "Juli, August, September",
-            Ballaststoffgehalt: "2.4g pro 100g",
+            ballaststoffgehalt: "2.4g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Pralle, trockene Beeren, keine Schimmelstellen"
@@ -525,7 +525,7 @@ export const foods = [
             haltbarkeit: "2 Tage",
             kategorie: "Obst",
             saison: "Juni, Juli, August",
-            Ballaststoffgehalt: "6.7g pro 100g",
+            ballaststoffgehalt: "6.7g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Unversehrte, trockene Beeren, keine Druckstellen"
@@ -537,7 +537,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Obst",
             saison: "Juli, August, September",
-            Ballaststoffgehalt: "5.3g pro 100g",
+            ballaststoffgehalt: "5.3g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Pralle, glänzende Beeren, keine Schimmelstellen"
@@ -549,7 +549,7 @@ export const foods = [
             haltbarkeit: "2 Tage",
             kategorie: "Obst",
             saison: "Mai, Juni, Juli",
-            Ballaststoffgehalt: "2g pro 100g",
+            ballaststoffgehalt: "2g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Kräftig rot, grüne Kelchblätter, keine Druckstellen"
@@ -561,7 +561,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Gemüse",
             saison: "September, Oktober, November, Dezember, Januar, Februar, März",
-            Ballaststoffgehalt: "2.5g pro 100g",
+            ballaststoffgehalt: "2.5g pro 100g",
             verbrauchWoche: "1 Kopf",
             verbrauchTag: "0.14 Kopf",
             merkmal: "Feste Köpfe, keine braunen Stellen"
@@ -573,7 +573,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Gemüse",
             saison: "September, Oktober, November, Dezember, Januar, Februar, März",
-            Ballaststoffgehalt: "2.8g pro 100g",
+            ballaststoffgehalt: "2.8g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Feste Knollen, glatte Schale, keine Risse"
@@ -585,7 +585,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Gemüse",
             saison: "April, Mai, Juni, September, Oktober",
-            Ballaststoffgehalt: "2.2g pro 100g",
+            ballaststoffgehalt: "2.2g pro 100g",
             verbrauchWoche: "300g",
             verbrauchTag: "43g",
             merkmal: "Kräftig grüne Blätter, keine welken Stellen. Achte auf ein Label - Frische Ernte!"
@@ -597,7 +597,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September",
-            Ballaststoffgehalt: "1.1g pro 100g",
+            ballaststoffgehalt: "1.1g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Feste, glatte Schale, keine Dellen"
@@ -609,7 +609,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Gemüse",
             saison: "Juli, August, September, Oktober",
-            Ballaststoffgehalt: "1.2g pro 100g",
+            ballaststoffgehalt: "1.2g pro 100g",
             verbrauchWoche: "1kg",
             verbrauchTag: "143g",
             merkmal: "Kräftig rot, aromatischer Duft, keine Druckstellen"
@@ -621,7 +621,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September, Oktober",
-            Ballaststoffgehalt: "1.6g pro 100g",
+            ballaststoffgehalt: "1.6g pro 100g",
             verbrauchWoche: "1 Bund",
             verbrauchTag: "0.14 Bund",
             merkmal: "Feste, knackige Stangen, frische Blätter"
@@ -633,7 +633,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September, Oktober",
-            Ballaststoffgehalt: "3.1g pro 100g",
+            ballaststoffgehalt: "3.1g pro 100g",
             verbrauchWoche: "2 Knollen",
             verbrauchTag: "0.29 Knollen",
             merkmal: "Feste Knolle, frisches Grün, keine braunen Stellen"
@@ -645,7 +645,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Gemüse",
             saison: "April, Mai, Juni",
-            Ballaststoffgehalt: "1.5g pro 100g",
+            ballaststoffgehalt: "1.5g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Köpfe geschlossen, Stangen quietschen beim Aneinanderreiben"
@@ -657,7 +657,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Gemüse",
             saison: "November, Dezember, Januar, Februar",
-            Ballaststoffgehalt: "4.2g pro 100g",
+            ballaststoffgehalt: "4.2g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Kräftig grüne, krause Blätter, keine gelben Stellen"
@@ -669,7 +669,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September",
-            Ballaststoffgehalt: "0.5g pro 100g",
+            ballaststoffgehalt: "0.5g pro 100g",
             verbrauchWoche: "3 Stück",
             verbrauchTag: "0.43 Stück",
             merkmal: "Feste, glatte Schale, keine weichen Stellen"
@@ -681,7 +681,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Obst",
             saison: "",
-            Ballaststoffgehalt: "3.2g pro 100g",
+            ballaststoffgehalt: "3.2g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Feste, glänzende Früchte, keine Runzeln"
@@ -693,7 +693,7 @@ export const foods = [
             haltbarkeit: "5 Tage",
             kategorie: "Gemüse",
             saison: "Juni, Juli, August, September",
-            Ballaststoffgehalt: "5.4g pro 100g",
+            ballaststoffgehalt: "5.4g pro 100g",
             verbrauchWoche: "2 Stück",
             verbrauchTag: "0.29 Stück",
             merkmal: "Feste, geschlossene Köpfe, frische Schnittstellen",
@@ -706,7 +706,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "10g pro 100g",
+            ballaststoffgehalt: "10g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Trocken, keine Klumpen, frischer Getreidegeruch"
@@ -718,7 +718,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Beilage",
             saison: "",
-            Ballaststoffgehalt: "3.5g pro 100g",
+            ballaststoffgehalt: "3.5g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Gleichmäßige Körner, keine Schädlinge"
@@ -730,7 +730,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Beilage",
             saison: "",
-            Ballaststoffgehalt: "6g pro 100g",
+            ballaststoffgehalt: "6g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Trocken, keine Bruchstücke, gleichmäßige Farbe"
@@ -742,7 +742,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "8g pro 100g",
+            ballaststoffgehalt: "8g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Sauber, trocken, einheitliche Farbe"
@@ -754,7 +754,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "6g pro 100g",
+            ballaststoffgehalt: "6g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Sauber, trocken, einheitliche Farbe"
@@ -766,7 +766,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "3.9g pro 100g",
+            ballaststoffgehalt: "3.9g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Trocken, keine Klumpen, einheitliche Farbe"
@@ -778,7 +778,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "4.5g pro 100g",
+            ballaststoffgehalt: "4.5g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Trocken, keine Klumpen, einheitliche Farbe"
@@ -790,7 +790,7 @@ export const foods = [
             haltbarkeit: "3 Tage",
             kategorie: "Beilage",
             saison: "",
-            Ballaststoffgehalt: "6g pro 100g",
+            ballaststoffgehalt: "6g pro 100g",
             verbrauchWoche: "1 Stück",
             verbrauchTag: "0.14 Stück",
             merkmal: "Kruste knusprig, innen saftig, keine Schimmelstellen"
@@ -802,7 +802,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Frisch, keine Flüssigkeitsansammlung, mild-säuerlicher Geruch"
@@ -814,7 +814,7 @@ export const foods = [
             haltbarkeit: "7 Tage",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100ml",
+            ballaststoffgehalt: "0g pro 100ml",
             verbrauchWoche: "1L",
             verbrauchTag: "143ml",
             merkmal: "Frisch, keine Klumpen, leicht säuerlicher Geruch"
@@ -826,7 +826,7 @@ export const foods = [
             haltbarkeit: "2 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Feste Konsistenz, keine Verfärbungen"
@@ -838,7 +838,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Frisch, milchiger Geruch, keine Flüssigkeitsansammlung"
@@ -850,7 +850,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "250g",
             verbrauchTag: "36g",
             merkmal: "Cremig, keine Flüssigkeitsansammlung, mild-süßer Geruch"
@@ -862,7 +862,7 @@ export const foods = [
             haltbarkeit: "3 Wochen",
             kategorie: "Molkereiprodukt",
             saison: "",
-            Ballaststoffgehalt: "0g pro 100g",
+            ballaststoffgehalt: "0g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Feste Konsistenz, keine Schimmelstellen"
@@ -874,7 +874,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "2.3g pro 100g",
+            ballaststoffgehalt: "2.3g pro 100g",
             verbrauchWoche: "400g",
             verbrauchTag: "57g",
             merkmal: "Feste Konsistenz, neutraler Geruch"
@@ -886,7 +886,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "0.8g pro 100g",
+            ballaststoffgehalt: "0.8g pro 100g",
             verbrauchWoche: "500g",
             verbrauchTag: "71g",
             merkmal: "Cremig, keine Flüssigkeitsansammlung, neutraler Geruch"
@@ -898,7 +898,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "13g pro 100g",
+            ballaststoffgehalt: "13g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Trocken, keine Klumpen, neutraler Geruch"
@@ -910,7 +910,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "1.2g pro 100g",
+            ballaststoffgehalt: "1.2g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Feste Konsistenz, neutraler Geruch"
@@ -922,7 +922,7 @@ export const foods = [
             haltbarkeit: "1 Woche",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "1.4g pro 100g",
+            ballaststoffgehalt: "1.4g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Feste Konsistenz, nussiger Geruch"
@@ -934,7 +934,7 @@ export const foods = [
             haltbarkeit: "1 Jahr",
             kategorie: "Alternative, Beilage",
             saison: "",
-            Ballaststoffgehalt: "8g pro 100g",
+            ballaststoffgehalt: "8g pro 100g",
             verbrauchWoche: "200g",
             verbrauchTag: "29g",
             merkmal: "Sauber, trocken, einheitliche Farbe"
@@ -946,7 +946,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "September, Oktober, November",
-            Ballaststoffgehalt: "6.7g pro 100g",
+            ballaststoffgehalt: "6.7g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Schale unbeschädigt, Kerne hell, kein Schimmel"
@@ -958,7 +958,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "September, Oktober",
-            Ballaststoffgehalt: "7.5g pro 100g",
+            ballaststoffgehalt: "7.5g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Schale unbeschädigt, Kerne hell, kein Schimmel"
@@ -970,7 +970,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "3.7g pro 100g",
+            ballaststoffgehalt: "3.7g pro 100g",
             verbrauchWoche: "50g",
             verbrauchTag: "7g",
             merkmal: "Hell, trocken, kein ranziger Geruch"
@@ -982,7 +982,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "",
-            Ballaststoffgehalt: "6g pro 100g",
+            ballaststoffgehalt: "6g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Hell, trocken, kein ranziger Geruch"
@@ -994,7 +994,7 @@ export const foods = [
             haltbarkeit: "6 Monate",
             kategorie: "Alternative",
             saison: "September, Oktober",
-            Ballaststoffgehalt: "6g pro 100g",
+            ballaststoffgehalt: "6g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Grün, trocken, kein ranziger Geruch"
