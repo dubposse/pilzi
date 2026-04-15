@@ -73,7 +73,7 @@ export const foods = [
         },
         {
             id: 8,
-            name: "Grüne Mandeln (unreif)",
+            name: "Grüne Mandeln",
             kgPreis: "12.0 Euro pro 1kg",
             haltbarkeit: "3 bis 5 Tage",
             kategorie: "Alternative",
@@ -81,7 +81,8 @@ export const foods = [
             ballaststoffgehalt: "12g pro 100g",
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
-            merkmal: "Grün, leicht pelzig(ähnlich kleiner Aprikose), Kern weiß. In orientalischen Läden erhältlich (Çağla, Chaghale Badam). Als Snack mitsamt Schale in Salz dippen.  "
+            merkmal: "Grün, leicht pelzig(ähnlich kleiner Aprikose), Kern weiß. In orientalischen Läden erhältlich (Çağla, Chaghale Badam). Als Snack mitsamt Schale in Salz dippen.",
+            info: "Grüne Mandeln sind unreife Mandeln, die nur im Frühling erhältlich sind. Sie haben eine zarte, grüne Schale und einen milden Geschmack. Aufgrund ihrer begrenzten Haltbarkeit sollten sie schnell verzehrt werden."
         }, 
         {
             id: 9,

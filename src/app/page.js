@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useRef } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import Footer from './Footer'
 import { foods } from '../data/foods'
 
@@ -36,7 +36,16 @@ const fieldLabels = {
 
 export default function Page() {
   const appRef = useRef(null)
+  const [hasStarted, setHasStarted] = useState(false)
   
+  // Beim Laden der Seite immer nach oben scrollen
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+    window.scrollTo(0, 0)
+  }, [])
+
   // Scrollt zur Food-Card mit passender ID
   const scrollToFood = (id) => {
     const element = document.getElementById(`food-${id}`)
@@ -44,6 +53,16 @@ export default function Page() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
+
+  const handleStartExploring = () => {
+    setHasStarted(true)
+    setTimeout(() => {
+      if (appRef.current) {
+        appRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }, 0)
+  }
+
   const currentMonthIndex = new Date().getMonth()
   const [search, setSearch] = useState('')
   const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
@@ -75,7 +94,7 @@ export default function Page() {
   return (
 
     <main className="page">
-      <div className="design-hintergrund" style={{ minHeight: '100vh' }}>
+      <div className="design-hintergrund" style={{ minHeight: '100vh', display: hasStarted ? 'none' : 'block' }}>
         <div className="fix-top-menu">
           <div className="hero-content">
             <h1>Finde saisonale Lebensmittel aus deiner Region</h1>
@@ -92,21 +111,13 @@ export default function Page() {
               <h3 className="hero-desc">
                 Pilzi zeigt dir, wann Obst und Gemüse in Deutschland reif ist.
               </h3>
-              <a
-                href="#app"
+              <button
+                onClick={handleStartExploring}
                 className="hero-cta"
-                style={{
-                  marginTop: '1.2em',
-                  display: 'inline-block',
-                  textDecoration: 'none',
-                  textAlign: 'center',
-                  position: 'relative',
-                  zIndex: 999,
-                  pointerEvents: 'auto'
-                }}
+                type="button"
               >
                 Jetzt entdecken
-              </a>
+              </button>
             </section>
           </div>
         </div>
