@@ -13,7 +13,7 @@ Die Web-App zeigt dir, welche Lebensmittel in Deutschland saisonal verfügbar si
 
 ## 💭 Warum ich Pilzi gebaut habe
 
-Ich habe Pilzi entwickelt, weil mir im Alltag oft die Orientierung fehlt, welche Lebensmittel wirklich saisonal und frisch sind. Beim Einkaufen ist vieles verfügbar, aber nicht alles hat gerade Saison – und genau hier wollte ich eine einfache, klare Lösung schaffen.
+Pilzi wurde entwickelt, um saisonale Lebensmittel übersichtlich und filterbar darzustellen und alltägliche Einkaufsentscheidungen zu vereinfachen.
 
 Gleichzeitig war das Projekt für mich eine Möglichkeit, meine Kenntnisse in JavaScript und Next.js praktisch anzuwenden und ein eigenständiges Produkt umzusetzen – nicht nur ein Tutorial, sondern eine Anwendung mit echtem Nutzen.
 
@@ -56,22 +56,7 @@ Dieser Ansatz ermöglicht eine einfache, performante und wartbare Anwendung ohne
 
 ## 🎯 Ziel
 
-Ziel von Pilzi ist es, ein leicht zugängliches Tool zu schaffen, das:
-
-- Alltagsentscheidungen beim Einkauf unterstützt
-- ein Bewusstsein für saisonale Lebensmittel fördert
-- einfach und intuitiv bedienbar ist
-
----
-
-## 💡 Ausblick
-
-Mögliche Erweiterungen:
-
-- Favoriten speichern
-- personalisierte Empfehlungen
-- Wochenplanung für Mahlzeiten
-- Erweiterung der Datenbasis
+Pilzi wurde entwickelt, um alltägliche Einkaufsentscheidungen durch eine übersichtliche Darstellung saisonaler Lebensmittel zu vereinfachen. Dabei liegt der Fokus auf intuitiver Bedienung, strukturierter Datenaufbereitung und einer performanten Web-Architektur.
 
 ---
 
