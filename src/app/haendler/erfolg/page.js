@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Footer from '../../Footer'
 
-export default function ErfolgPage() {
+function ErfolgPageContent() {
   const searchParams = useSearchParams()
   const [slug, setSlug] = useState('')
   const [token, setToken] = useState('')
@@ -317,5 +317,43 @@ export default function ErfolgPage() {
       </main>
       <Footer />
     </>
+  )
+}
+
+// Wrapper mit Suspense Boundary für useSearchParams
+export default function ErfolgPage() {
+  return (
+    <Suspense fallback={
+      <>
+        <main className="page">
+          <div style={{
+            minHeight: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '2rem 1rem',
+            background: 'linear-gradient(135deg, #fef8f9 0%, #fff5f6 100%)'
+          }}>
+            <div style={{
+              background: '#fff',
+              border: '1.5px solid #ffd5db',
+              borderRadius: 18,
+              boxShadow: '0 4px 32px rgba(228,0,27,0.13)',
+              padding: '2.5rem',
+              maxWidth: 560,
+              textAlign: 'center',
+              color: '#b10016',
+              fontFamily: 'Segoe UI, system-ui, sans-serif'
+            }}>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⏳</div>
+              <p style={{ fontSize: '1.1rem' }}>Lädt...</p>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </>
+    }>
+      <ErfolgPageContent />
+    </Suspense>
   )
 }
