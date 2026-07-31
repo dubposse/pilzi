@@ -88,7 +88,7 @@ export const foods = [
             id: 9,
             name: "Haferdrink",
             kgPreis: "2.0 Euro pro 1L",
-            haltbarkeit: "7 Tage nach Öffnung",
+            haltbarkeit: "7 Tage",
             kategorie: "Alternative",
             saison: "",
             ballaststoffgehalt: "0.8g pro 100ml",
@@ -999,6 +999,32 @@ export const foods = [
             verbrauchWoche: "100g",
             verbrauchTag: "14g",
             merkmal: "Grün, trocken, kein ranziger Geruch"
+        },
+        {
+            id: 85,
+            name: "Radieschen",
+            kgPreis: "4 bis 6 Euro pro 1kg",
+            haltbarkeit: "2 bis 3 Tage",
+            kategorie: "Gemüse",
+            saison: "Mai, Juni, Juli, August",
+            ballaststoffgehalt: "1.6g pro 100g",
+            verbrauchWoche: "500g",
+            verbrauchTag: "71g",
+            merkmal: "Druck-Test 🔨 Frisch: steinhart Alt: elastisch | Schale 👉 Keine Risse oder dunkle Stellen. Frisch: Haut ist glatt, prall und glänzt. Alt: Schale wirkt stumpf, matt oder bekommt kleine Runzeln (wie bei einer Rosine). Wurzelansatz 👉 Frisch: Weiss und fest. Alt: Braun, schleimig oder vertrocknet | Geschmack: Scharf und würzig",
+            info: "Größe: Die frischen Knollen sind im Durchschnitt etwas kleiner und kompakter als die oft sehr gleichmäßig großen Treibhaus-Varianten. Laub: Das Grün ist oft kräftiger und robuster."
+        },
+        {
+            id: 86,
+            name: "Kohlrabi",
+            kgPreis: "1 bis 2 Euro pro Stück",
+            haltbarkeit: "2 Tage",
+            kategorie: "Gemüse",
+            saison: "Juni, Juli, August, September",
+            ballaststoffgehalt: "3.6g pro 100g",
+            verbrauchWoche: "500g",
+            verbrauchTag: "71g",
+            merkmal: "Größe: 8-12cm(etwa Tennisballgröße) | Schale: Glatt, unbeschädigte Haut ohne Risse deutet auf Saftigkeit hin",
+            info: "Blätter: Die Herzblätter (die kleinen inneren Blätter) sollten frisch und aufrecht stehen. Sie sind übrigens essbar und enthalten oft mehr Vitamine als die Knolle selbst."
         }
          
 

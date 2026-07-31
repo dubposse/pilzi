@@ -88,6 +88,27 @@ export default function DatenschutzPage() {
                 Diese Website verwendet keine Cookies, die einer Einwilligung bedürfen, und setzt keine Tracking- oder Analyse-Tools ein.
               </li>
               <li style={{marginBottom: 10}}>
+                <strong>Händlerseiten</strong><br/>
+                Händler haben die Möglichkeit, freiwillig eine öffentliche Profilseite zu erstellen. Dabei geben sie selbst folgende Daten ein:<br/>
+                <ul style={{margin: '6px 0 6px 18px'}}>
+                  <li>Händlername</li>
+                  <li>Adresse (Straße, PLZ, Ort)</li>
+                  <li>Optional: Telefon, Öffnungszeiten, Kurzbeschreibung, Website</li>
+                </ul>
+                <br/>
+                <strong>Speicherung und Verwendung:</strong><br/>
+                Die eingegebenen Daten werden in einer PostgreSQL-Datenbank gespeichert und ausschließlich zur Bereitstellung der öffentlichen Händlerseite verwendet. Die Händlerseite ist öffentlich im Internet erreichbar und kann von jedem Nutzer aufgerufen werden.<br/>
+                <br/>
+                <strong>Bearbeitungslink:</strong><br/>
+                Zum Bearbeiten der Händler-Daten wird ein individueller, geheimer Bearbeitungslink verwendet. Dieser Link sollte vertraulich behandelt werden. Jeder, der über diesen Link verfügt, kann die veröffentlichten Daten ändern.<br/>
+                <br/>
+                <strong>Änderung und Löschung:</strong><br/>
+                Händler können ihre Daten jederzeit über den Bearbeitungslink ändern. Für die Löschung der Händlerseite wenden Sie sich bitte an die oben angegebene verantwortliche Stelle.<br/>
+                <br/>
+                <strong>Rechtsgrundlage:</strong><br/>
+                Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch freiwillige Eingabe)
+              </li>
+              <li style={{marginBottom: 10}}>
                 <strong>Ihre Rechte</strong><br/>
                 Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:<br/>
                 <ul style={{margin: '6px 0 6px 18px'}}>
@@ -152,6 +173,27 @@ export default function DatenschutzPage() {
               <li style={{marginBottom: 10}}>
                 <strong>Cookies and Tracking</strong><br/>
                 This website does not use cookies that require consent and does not use any tracking or analytics tools.
+              </li>
+              <li style={{marginBottom: 10}}>
+                <strong>Merchant Pages</strong><br/>
+                Merchants have the option to voluntarily create a public profile page. In doing so, they enter the following data themselves:<br/>
+                <ul style={{margin: '6px 0 6px 18px'}}>
+                  <li>Merchant name</li>
+                  <li>Address (street, postal code, city)</li>
+                  <li>Optional: phone, opening hours, brief description, website</li>
+                </ul>
+                <br/>
+                <strong>Storage and Use:</strong><br/>
+                The entered data is stored in a PostgreSQL database and is used exclusively to provide the public merchant page. The merchant page is publicly accessible on the internet and can be accessed by any user.<br/>
+                <br/>
+                <strong>Edit Link:</strong><br/>
+                An individual, secret edit link is used to edit merchant data. This link should be treated confidentially. Anyone who has access to this link can modify the published data.<br/>
+                <br/>
+                <strong>Modification and Deletion:</strong><br/>
+                Merchants can modify their data at any time via the edit link. To delete the merchant page, please contact the responsible entity listed above.<br/>
+                <br/>
+                <strong>Legal Basis:</strong><br/>
+                Art. 6(1)(a) GDPR (consent through voluntary entry)
               </li>
               <li style={{marginBottom: 10}}>
                 <strong>Your Rights</strong><br/>

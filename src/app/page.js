@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
 import Footer from './Footer'
 import { foods } from '../data/foods'
 
@@ -176,7 +177,16 @@ export default function Page() {
         </section>
         <section className="saison-highlight-section" aria-label="Frische saisonale Lebensmittel im Monat">
           <h2 className="highlight-headline-small">
-         Pilzis Regio-Check: Ernte & Mehr
+            <Link 
+              href="/haendler/erstellen" 
+              style={{
+                color: 'inherit',
+                textDecoration: 'none',
+                cursor: 'pointer'
+              }}
+            >
+              Pilzis Regio-Check: Ernte & Mehr
+            </Link>
           </h2>
           <p className="result-count">
            <strong>{selectedMonth}</strong> · <strong>{selectedCategory}</strong> · {filteredFoods.length} von {foods.length}
