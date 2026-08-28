@@ -68,6 +68,40 @@ export default function Page() {
   const [search, setSearch] = useState('')
   const [selectedMonth, setSelectedMonth] = useState(monthNames[currentMonthIndex])
   const [selectedCategory, setSelectedCategory] = useState('Alle')
+  const [showPilziStory, setShowPilziStory] = useState(false)
+  const pilziStoryClickCount = useRef(0)
+  const voicesRef = useRef([])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.speechSynthesis) return
+    const loadVoices = () => { voicesRef.current = window.speechSynthesis.getVoices() }
+    loadVoices()
+    window.speechSynthesis.addEventListener('voiceschanged', loadVoices)
+    return () => window.speechSynthesis.removeEventListener('voiceschanged', loadVoices)
+  }, [])
+
+  const handlePilziStoryClick = () => {
+    pilziStoryClickCount.current += 1
+    setShowPilziStory((v) => !v)
+
+    const clickCount = pilziStoryClickCount.current
+    if ((clickCount === 3 || clickCount === 7) && typeof window !== 'undefined' && window.speechSynthesis) {
+      const utterance = new SpeechSynthesisUtterance(
+        'Wie oft möchtest du diese phantastische Geschichte noch lesen?'
+      )
+      utterance.lang = 'de-DE'
+      utterance.rate = 0.8
+
+      const voices = voicesRef.current.length ? voicesRef.current : window.speechSynthesis.getVoices()
+      const germanVoice =
+        voices.find((v) => v.lang === 'de-DE') ||
+        voices.find((v) => v.lang?.startsWith('de'))
+      if (germanVoice) utterance.voice = germanVoice
+
+      window.speechSynthesis.cancel()
+      window.speechSynthesis.speak(utterance)
+    }
+  }
 
   const filteredFoods = useMemo(() => {
   return foods.filter((food) => {
@@ -174,6 +208,22 @@ export default function Page() {
       </button>
     ))}
   </div>
+
+  <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+    <button
+      type="button"
+      onClick={handlePilziStoryClick}
+      className="pilzi-story-toggle"
+    >
+      Geschichten mit Pilzi
+    </button>
+    {showPilziStory && (
+      <p className="pilzi-story">
+        Pilzi war wieder fleißig. Er war auf dem Pizzafeld unterwegs und hat ganz viel
+        frischen Pizzabelag gesammelt. Lasst es euch schmecken!
+      </p>
+    )}
+  </div>
         </section>
         <section className="saison-highlight-section" aria-label="Frische saisonale Lebensmittel im Monat">
           <h2 className="highlight-headline-small">
@@ -185,9 +235,26 @@ export default function Page() {
                 cursor: 'pointer'
               }}
             >
-              Pilzis Regio-Check: Ernte & Mehr
+              Pilzis Regio-Check: Händler-Profil erstellen
             </Link>
           </h2>
+          <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+            <Link
+              href="/haendler"
+              style={{
+                display: 'inline-block',
+                background: '#b10016',
+                color: '#fff',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                padding: '0.55rem 1.3rem',
+                borderRadius: 999,
+                textDecoration: 'none'
+              }}
+            >
+              Alle Händler ansehen
+            </Link>
+          </div>
           <p className="result-count">
            <strong>{selectedMonth}</strong> · <strong>{selectedCategory}</strong> · {filteredFoods.length} von {foods.length}
           </p>

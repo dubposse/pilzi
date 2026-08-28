@@ -492,6 +492,26 @@ h2 {
   margin: 2rem 0 1rem;
 }
 
+.pilzi-story {
+  font-size: 0.95rem;
+  color: #5d7c45;
+  font-style: italic;
+  max-width: 32rem;
+  margin: 0.8rem auto 0;
+  text-align: center;
+}
+
+.pilzi-story-toggle {
+  background: #f3f7ed;
+  color: #5d7c45;
+  border: 1.5px solid #cfe0bd;
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
 details {
   font-size: 0.75rem;
   color: #aaa;
