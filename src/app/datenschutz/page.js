@@ -52,7 +52,7 @@ export default function DatenschutzPage() {
                 Matthias Brehm<br/>
                 Nordwestring 89<br/>
                 90419 Nürnberg<br/>
-                E-Mail: matthiasbrehm1[at]gmx[dot]de
+                E-Mail: kontakt@matthiasbrehm.de
               </li>
               <li style={{marginBottom: 10}}>
                 <strong>Datenerfassung beim Aufruf der Website</strong><br/>
@@ -139,7 +139,7 @@ export default function DatenschutzPage() {
                 Matthias Brehm<br/>
                 Nordwestring 89<br/>
                 90419 Nürnberg<br/>
-                E-Mail: matthiasbrehm1[at]gmx[dot]de
+                E-Mail: kontakt@matthiasbrehm.de
               </li>
               <li style={{marginBottom: 10}}>
                 <strong>Data Collection When Visiting the Website</strong><br/>

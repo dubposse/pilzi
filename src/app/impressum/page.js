@@ -34,7 +34,7 @@ export default function ImpressumPage() {
         Matthias Brehm<br/>
         Nordwestring 89<br/>
         90419 Nürnberg<br/>
-        <a href="mailto:matthiasbrehm1@gmx.de" style={{color: '#b10016', textDecoration: 'underline'}}>matthiasbrehm1@gmx.de</a>
+        <a href="mailto:kontakt@matthiasbrehm.de" style={{color: '#b10016', textDecoration: 'underline'}}>kontakt@matthiasbrehm.de</a>
         <br/><br/>
         <Link href="/" style={{
           display: 'inline-block',
